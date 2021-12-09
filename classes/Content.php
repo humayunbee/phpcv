@@ -169,14 +169,15 @@ Class Content extends DBConnection {
 		extract($_POST);
 		$data = "";
 		foreach($_POST as $k => $v){
-			if(!in_array($k,array('id','description','summary'))){
+			if(!in_array($k,array('id', 'summary'))){
 				if(!empty($data)) $data .= ", ";
 				$data .= "`$k` = '$v'";
 			}
 		}
-				if(!empty($data)) $data .= ", ";
-				$data .= "`description` = '".addslashes(htmlentities($description))."'";
-				$data .= ",`summary` = '".addslashes($summary)."'";
+		if(!empty($data)) 
+		// $data .= ", ";
+		// $data .= "`description` = '".addslashes(htmlentities($description))."'";
+		$data .= ",`summary` = '".addslashes($summary)."'";
 
 		if(isset($_FILES['img']) && $_FILES['img']['tmp_name'] != ''){
 				$fname = 'uploads/'.strtotime(date('y-m-d H:i')).'_'.$_FILES['img']['name'];
@@ -205,6 +206,7 @@ Class Content extends DBConnection {
 		return json_encode($resp);
 		exit;
 	}
+
 
 	public function ido_delete(){
 		extract($_POST);

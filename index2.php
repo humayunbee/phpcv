@@ -208,20 +208,28 @@ while($row = $c_qry->fetch_assoc()){
                 <div class="row section-separator">
                     <div class="col-sm-12 text-center section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
                         <h2>What I do</h2>
+   
                     </div>
+
+                    <?php 
+                  $p_qry = $conn->query("SELECT * FROM ido ");
+                  while($row = $p_qry->fetch_assoc()):
+                  ?>
                     <div class="col-sm-4">
                         <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                            <i class="fa fa-bullseye purple-color"></i>
-                            <h3>UI Design</h3>
+                                                    
+                        <img src="<?php echo validate_image($row['banner']) ?>" class="img-circle elevation-2" alt="User Image" style="height: 2rem; object-fit: cover"/>
+                  
+                            <h3><?php echo $row['name'] ?></h3>
                             <p>
-                                UI focuses on the micro aspects of interface designs. 
-                                The person who creates UI designs is called as UI designer and developer. 
-                                In other words, UX design triggers customer motivation, perception, cognition, 
-                                and response to develop a user experience about that particular product or service.
-                            </p>
+                            <?php echo $row['summary'] ?></p>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <br>
+  <?php endwhile; ?>
+
+
+                    <!-- <div class="col-sm-4">
                         <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
                             <i class="fa fa-code iron-color"></i>
                             <h3>Web Development</h3>
@@ -231,8 +239,8 @@ while($row = $c_qry->fetch_assoc()){
                                 Typically, WordPress developers perform some or all of the following tasks: Creating and customizing plugins and themes...
                             </p>
                         </div>
-                    </div>
-                    <div class="col-sm-4">
+                    </div> -->
+                    <!-- <div class="col-sm-4">
                         <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
                             <i class="fa fa-object-ungroup sky-color"></i>
                             <h3>App Development</h3>
@@ -242,7 +250,9 @@ while($row = $c_qry->fetch_assoc()){
                                 Mobile applications are designed and built for different operating systems and developers will want to learn how to build for both the Android operating system and Apple's iOS.
                             </p>
                         </div>
-                    </div>
+                    </div> -->
+
+                    
                 </div>
             </div>
         </section>

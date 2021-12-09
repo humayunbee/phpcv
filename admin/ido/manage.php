@@ -51,14 +51,14 @@ if(isset($_GET['id'])){
 						</div>
 					</div>
 				</div>
-				<div class="row">
+				<!-- <div class="row">
 					<div class="col-sm-12">
 						<div class="form-group">
 							<label for="" class="control-label">Description</label>
-				             <textarea name="description" id="" cols="30" rows="10" class="form-control summernote"><?php echo (isset($description)) ? html_entity_decode(($description)) : '' ?></textarea>
+				             <textarea name="description" id="" cols="30" rows="10" class="form-control summernote"><?php // echo (isset($description)) ? html_entity_decode(($description)) : '' ?></textarea>
 						</div>
 					</div>
-				</div>
+				</div> -->
 				<div class="form-group">
 					<label for="" class="control-label">Banner Image</label>
 					<div class="custom-file">
