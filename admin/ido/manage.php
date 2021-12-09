@@ -14,6 +14,7 @@ if(isset($_GET['id'])){
 }
 ?>
 
+
 <style>
 	#cimg{
 		max-width: 50%;

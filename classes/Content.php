@@ -159,6 +159,8 @@ Class Content extends DBConnection {
 			$resp['message']= " Project Details successfully deleted";
 			$this->settings->set_flashdata('success',$resp['message']);
 		}
+
+		return $qry;
 	}
 
 
@@ -212,6 +214,7 @@ Class Content extends DBConnection {
 			$resp['message']= " Ido Details successfully deleted";
 			$this->settings->set_flashdata('success',$resp['message']);
 		}
+		return $qry;
 	}
 
 
