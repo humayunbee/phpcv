@@ -288,9 +288,9 @@ while($row = $c_qry->fetch_assoc()){
                                             <div class="mh-featured-project-content">
                                                 <h4 class="project-category wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s"><?php echo $row['client'] ?></h4>
                                                 <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s"><?php echo $row['name'] ?></h2>
-                                                <span class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">Design & Development</span>
+                                                <span class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s"><?php echo $row['summary'] ?></span>
                                                 <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s"><?php echo stripslashes(html_entity_decode($row['description'])) ?></p>
-                                                <a href="#" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">View Details</a>
+                                                <a href="<?php echo $row['link'] ?>" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">View Details</a>
                                                 <div class="mh-testimonial mh-project-testimonial wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.9s">
                                                     <blockquote>
                                     					<q>Excellent Template - suits my needs perfectly whilst allowing me to learn some new technology first hand.</q>

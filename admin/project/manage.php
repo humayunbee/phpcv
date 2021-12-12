@@ -58,6 +58,10 @@ if(isset($_GET['id'])){
 					</div>
 				</div>
 				<div class="form-group">
+							<label for="" class="control-label">Project Link</label>
+							<textarea name="link" cols="30" rows="2" class="form-control"><?php echo isset($link) ? $link : '' ?></textarea>
+						</div>
+				<div class="form-group">
 					<label for="" class="control-label">Banner Image</label>
 					<div class="custom-file">
 		              <input type="file" class="custom-file-input rounded-circle" id="customFile" name="img" onchange="displayImg(this,$(this))">
